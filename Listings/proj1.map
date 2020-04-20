@@ -1,0 +1,738 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    startup.o(RESET) refers to startup.o(STACK) for Stack_Top
+    startup.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    internalrtc.o(i.Timer1_ISR) refers to internalrtc.o(.data) for x
+    internalrtc.o(i.main) refers to internalrtc.o(i.Board_Init) for Board_Init
+    internalrtc.o(i.main) refers to internalrtc.o(i.SystemInit) for SystemInit
+    internalrtc.o(i.main) refers to internalrtc.o(i.uart_init) for uart_init
+    internalrtc.o(i.main) refers to internalrtc.o(i.RTC_Init) for RTC_Init
+    internalrtc.o(i.main) refers to internalrtc.o(i.timer1_Init) for timer1_Init
+    internalrtc.o(i.main) refers to lcd.o(i.LCD_Reset) for LCD_Reset
+    internalrtc.o(i.main) refers to lcd.o(i.LCD_Init) for LCD_Init
+    internalrtc.o(i.main) refers to internalrtc.o(i.RTC_SetDateTime) for RTC_SetDateTime
+    internalrtc.o(i.main) refers to internalrtc.o(i.RTC_GetDateTime) for RTC_GetDateTime
+    internalrtc.o(i.main) refers to printf6.o(i.__0sprintf$6) for __2sprintf
+    internalrtc.o(i.main) refers to internalrtc.o(i.serialPrintStr) for serialPrintStr
+    internalrtc.o(i.main) refers to lcd.o(i.LCD_CmdWrite) for LCD_CmdWrite
+    internalrtc.o(i.main) refers to lcd.o(i.LCD_DisplayString) for LCD_DisplayString
+    internalrtc.o(i.main) refers to internalrtc.o(i.delay) for delay
+    internalrtc.o(i.main) refers to internalrtc.o(i.adc) for adc
+    internalrtc.o(i.main) refers to internalrtc.o(i.runDCMotor) for runDCMotor
+    internalrtc.o(i.main) refers to seven.o(i.alphadisp7SEG) for alphadisp7SEG
+    internalrtc.o(i.main) refers to lcd.o(i.delay_ms) for delay_ms
+    internalrtc.o(i.main) refers to internalrtc.o(.bss) for rtc
+    internalrtc.o(i.runDCMotor) refers to uidiv.o(.text) for __aeabi_uidivmod
+    internalrtc.o(i.serialPrint) refers to printf6.o(i.__0sprintf$6) for __2sprintf
+    internalrtc.o(i.timer1_Init) refers to internalrtc.o(i.Timer1_ISR) for Timer1_ISR
+    lcd.o(i.LCD_CmdWrite) refers to lcd.o(i.LCD_SendHigherNibble) for LCD_SendHigherNibble
+    lcd.o(i.LCD_CmdWrite) refers to lcd.o(i.LCD_SendCmdSignals) for LCD_SendCmdSignals
+    lcd.o(i.LCD_DataWrite) refers to lcd.o(i.LCD_SendHigherNibble) for LCD_SendHigherNibble
+    lcd.o(i.LCD_DataWrite) refers to lcd.o(i.LCD_SendDataSignals) for LCD_SendDataSignals
+    lcd.o(i.LCD_DisplayString) refers to lcd.o(i.LCD_DataWrite) for LCD_DataWrite
+    lcd.o(i.LCD_Init) refers to lcd.o(i.delay_ms) for delay_ms
+    lcd.o(i.LCD_Init) refers to lcd.o(i.LCD_Reset) for LCD_Reset
+    lcd.o(i.LCD_Init) refers to lcd.o(i.LCD_CmdWrite) for LCD_CmdWrite
+    lcd.o(i.LCD_Reset) refers to lcd.o(i.LCD_SendHigherNibble) for LCD_SendHigherNibble
+    lcd.o(i.LCD_Reset) refers to lcd.o(i.LCD_SendCmdSignals) for LCD_SendCmdSignals
+    lcd.o(i.LCD_Reset) refers to lcd.o(i.delay_ms) for delay_ms
+    lcd.o(i.LCD_Reset) refers to lcd.o(i.delay_us) for delay_us
+    lcd.o(i.LCD_SendCmdSignals) refers to lcd.o(i.delay_us) for delay_us
+    lcd.o(i.LCD_SendDataSignals) refers to lcd.o(i.delay_us) for delay_us
+    seven.o(i.alphadisp7SEG) refers to seven.o(i.getAlphaCode) for getAlphaCode
+    seven.o(i.alphadisp7SEG) refers to lcd.o(i.delay_ms) for delay_ms
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    printfb.o(i.__0fprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0fprintf$bare) refers to fputc.o(i.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0printf$bare) refers to fputc.o(i.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to stdout.o(.data) for __stdout
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printfb.o(i.__0vfprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vfprintf$bare) refers to fputc.o(i.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vprintf$bare) refers to fputc.o(i.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to stdout.o(.data) for __stdout
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printfb.o(i._printf_core) refers to printfb.o(i.__ARM_common_call_via_r6) for __ARM_common_call_via_r6
+    printf0.o(i.__0fprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0fprintf$0) refers to fputc.o(i.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0printf$0) refers to fputc.o(i.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to stdout.o(.data) for __stdout
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf0.o(i.__0vfprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vfprintf$0) refers to fputc.o(i.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vprintf$0) refers to fputc.o(i.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to stdout.o(.data) for __stdout
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf0.o(i._printf_core) refers to printfb.o(i.__ARM_common_call_via_r6) for __ARM_common_call_via_r6
+    printf1.o(i.__0fprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0fprintf$1) refers to fputc.o(i.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0printf$1) refers to fputc.o(i.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to stdout.o(.data) for __stdout
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i.__0vfprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vfprintf$1) refers to fputc.o(i.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vprintf$1) refers to fputc.o(i.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to stdout.o(.data) for __stdout
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i._printf_core) refers to printf1.o(i.__ARM_common_call_via_r2) for __ARM_common_call_via_r2
+    printf1.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf2.o(i.__0fprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0fprintf$2) refers to fputc.o(i.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0printf$2) refers to fputc.o(i.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to stdout.o(.data) for __stdout
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf2.o(i.__0vfprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vfprintf$2) refers to fputc.o(i.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vprintf$2) refers to fputc.o(i.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to stdout.o(.data) for __stdout
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf2.o(i._printf_core) refers to printf1.o(i.__ARM_common_call_via_r2) for __ARM_common_call_via_r2
+    printf3.o(i.__0fprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0fprintf$3) refers to fputc.o(i.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0printf$3) refers to fputc.o(i.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to stdout.o(.data) for __stdout
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i.__0vfprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vfprintf$3) refers to fputc.o(i.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vprintf$3) refers to fputc.o(i.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to stdout.o(.data) for __stdout
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i._printf_core) refers to printf1.o(i.__ARM_common_call_via_r2) for __ARM_common_call_via_r2
+    printf3.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf4.o(i.__0fprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0fprintf$4) refers to fputc.o(i.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0printf$4) refers to fputc.o(i.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to stdout.o(.data) for __stdout
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i.__0vfprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vfprintf$4) refers to fputc.o(i.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vprintf$4) refers to fputc.o(i.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to stdout.o(.data) for __stdout
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i._printf_core) refers to printf1.o(i.__ARM_common_call_via_r2) for __ARM_common_call_via_r2
+    printf4.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf5.o(i.__0fprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0fprintf$5) refers to fputc.o(i.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0printf$5) refers to fputc.o(i.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to stdout.o(.data) for __stdout
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i.__0vfprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vfprintf$5) refers to fputc.o(i.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vprintf$5) refers to fputc.o(i.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to stdout.o(.data) for __stdout
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i._printf_core) refers to printf1.o(i.__ARM_common_call_via_r2) for __ARM_common_call_via_r2
+    printf5.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf6.o(i.__0fprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0fprintf$6) refers to fputc.o(i.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0printf$6) refers to fputc.o(i.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to stdout.o(.data) for __stdout
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i.__0vfprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vfprintf$6) refers to fputc.o(i.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vprintf$6) refers to fputc.o(i.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to stdout.o(.data) for __stdout
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i._printf_core) refers to printf1.o(i.__ARM_common_call_via_r2) for __ARM_common_call_via_r2
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_pre_padding) for _printf_pre_padding
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_post_padding) for _printf_post_padding
+    printf6.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf6.o(i._printf_post_padding) refers to printfb.o(i.__ARM_common_call_via_r6) for __ARM_common_call_via_r6
+    printf6.o(i._printf_pre_padding) refers to printfb.o(i.__ARM_common_call_via_r6) for __ARM_common_call_via_r6
+    printf7.o(i.__0fprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0fprintf$7) refers to fputc.o(i.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0printf$7) refers to fputc.o(i.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to stdout.o(.data) for __stdout
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i.__0vfprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vfprintf$7) refers to fputc.o(i.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vprintf$7) refers to fputc.o(i.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to stdout.o(.data) for __stdout
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i._printf_core) refers to printf1.o(i.__ARM_common_call_via_r2) for __ARM_common_call_via_r2
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_pre_padding) for _printf_pre_padding
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_post_padding) for _printf_post_padding
+    printf7.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf7.o(i._printf_post_padding) refers to printfb.o(i.__ARM_common_call_via_r6) for __ARM_common_call_via_r6
+    printf7.o(i._printf_pre_padding) refers to printfb.o(i.__ARM_common_call_via_r6) for __ARM_common_call_via_r6
+    printf8.o(i.__0fprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0fprintf$8) refers to fputc.o(i.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0printf$8) refers to fputc.o(i.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to stdout.o(.data) for __stdout
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i.__0vfprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vfprintf$8) refers to fputc.o(i.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vprintf$8) refers to fputc.o(i.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to stdout.o(.data) for __stdout
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i._printf_core) refers to printf1.o(i.__ARM_common_call_via_r2) for __ARM_common_call_via_r2
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_pre_padding) for _printf_pre_padding
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_post_padding) for _printf_post_padding
+    printf8.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf8.o(i._printf_post_padding) refers to printfb.o(i.__ARM_common_call_via_r6) for __ARM_common_call_via_r6
+    printf8.o(i._printf_pre_padding) refers to printfb.o(i.__ARM_common_call_via_r6) for __ARM_common_call_via_r6
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to fputc.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to fputc.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to fputc.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to fputc.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printf1.o(i.__ARM_common_call_via_r2) for __ARM_common_call_via_r2
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_post_padding) refers to printfb.o(i.__ARM_common_call_via_r6) for __ARM_common_call_via_r6
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers to printfb.o(i.__ARM_common_call_via_r6) for __ARM_common_call_via_r6
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup.o(STACK) for __initial_sp
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to internalrtc.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to internalrtc.o(i.main) for main
+    fputc.o(i.fputc) refers (Special) to iusesemip.o(.text) for __I$use$semihosting$fputc
+    fputc.o(i.fputc) refers (Special) to semi.o(.text) for __semihosting_library_function
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    init.o(.text) refers to init.o(i.__ARM_common_call_via_r3) for __ARM_common_call_via_r3
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    depilogue.o(.text) refers to depilogue.o(i.__ARM_clz) for __ARM_clz
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup.o(HEAP), (0 bytes).
+    Removing internalrtc.o(i.serialPrint), (116 bytes).
+    Removing dadd.o(.text), (360 bytes).
+    Removing dmul.o(.text), (212 bytes).
+    Removing ddiv.o(.text), (244 bytes).
+    Removing dfixul.o(.text), (68 bytes).
+    Removing cdrcmple.o(.text), (40 bytes).
+    Removing depilogue.o(.text), (196 bytes).
+    Removing depilogue.o(i.__ARM_clz), (46 bytes).
+
+9 unused section(s) (total 1282 bytes) removed from the image.
+
+==============================================================================
+
+Adding Veneers to the image
+
+    Adding AT veneer (8 bytes, Inline) for call to '__aeabi_uidivmod' from internalrtc.o(i.runDCMotor).
+    Adding AT veneer (8 bytes, Inline) for call to '__scatterload' from entry5.o(.ARM.Collect$$$$00000004).
+    Adding TA veneer (8 bytes, Short) for call to '__main_after_scatterload' from init.o(.text).
+    Adding AT veneer (8 bytes, Inline) for call to '__2sprintf' from internalrtc.o(i.main).
+
+4 Veneer(s) (total 32 bytes) added to the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      264  startup.o(RESET)
+    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
+    ../clib/microlib/stdio/fputc.c           0x00000000   Number         0  fputc.o ABSOLUTE
+    ../clib/microlib/stdio/semi.s            0x00000000   Number         0  semi.o ABSOLUTE
+    ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusesemip.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    LCD.c                                    0x00000000   Number         0  lcd.o ABSOLUTE
+    Startup.s                                0x00000000   Number         0  startup.o ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    internalRTC.c                            0x00000000   Number         0  internalrtc.o ABSOLUTE
+    seven.c                                  0x00000000   Number         0  seven.o ABSOLUTE
+    Undef_Handler                            0x00000040   ARM Code       4  startup.o(RESET)
+    SWI_Handler                              0x00000044   ARM Code       4  startup.o(RESET)
+    PAbt_Handler                             0x00000048   ARM Code       4  startup.o(RESET)
+    DAbt_Handler                             0x0000004c   ARM Code       4  startup.o(RESET)
+    IRQ_Handler                              0x00000050   ARM Code       4  startup.o(RESET)
+    FIQ_Handler                              0x00000054   ARM Code       4  startup.o(RESET)
+    .ARM.Collect$$$$00000000                 0x00000108   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x00000108   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x0000010c   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x00000110   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x00000110   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x00000110   Section       12  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x0000011c   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x0000011c   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x0000011c   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x0000011c   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x00000128   Section        0  uidiv.o(.text)
+    .text                                    0x00000160   Section       32  init.o(.text)
+    i.Board_Init                             0x00000188   Section        0  internalrtc.o(i.Board_Init)
+    i.LCD_CmdWrite                           0x000001d8   Section        0  lcd.o(i.LCD_CmdWrite)
+    i.LCD_DataWrite                          0x00000208   Section        0  lcd.o(i.LCD_DataWrite)
+    i.LCD_DisplayString                      0x00000238   Section        0  lcd.o(i.LCD_DisplayString)
+    i.LCD_Init                               0x00000260   Section        0  lcd.o(i.LCD_Init)
+    i.LCD_Reset                              0x00000298   Section        0  lcd.o(i.LCD_Reset)
+    i.LCD_SendCmdSignals                     0x000002f4   Section        0  lcd.o(i.LCD_SendCmdSignals)
+    i.LCD_SendDataSignals                    0x0000032c   Section        0  lcd.o(i.LCD_SendDataSignals)
+    i.LCD_SendHigherNibble                   0x00000364   Section        0  lcd.o(i.LCD_SendHigherNibble)
+    i.RTC_GetDateTime                        0x00000388   Section        0  internalrtc.o(i.RTC_GetDateTime)
+    i.RTC_Init                               0x000003e4   Section        0  internalrtc.o(i.RTC_Init)
+    i.RTC_SetDateTime                        0x000003f8   Section        0  internalrtc.o(i.RTC_SetDateTime)
+    i.SystemInit                             0x0000043c   Section        0  internalrtc.o(i.SystemInit)
+    i.Timer1_ISR                             0x000004a4   Section        0  internalrtc.o(i.Timer1_ISR)
+    i.__0sprintf$6                           0x00000518   Section        0  printf6.o(i.__0sprintf$6)
+    i.__ARM_common_call_via_r2               0x00000540   Section        0  printf1.o(i.__ARM_common_call_via_r2)
+    i.__ARM_common_call_via_r3               0x00000542   Section        2  init.o(i.__ARM_common_call_via_r3)
+    i.__ARM_common_call_via_r6               0x00000544   Section        0  printfb.o(i.__ARM_common_call_via_r6)
+    i.__scatterload_copy                     0x00000548   Section       28  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00000564   Section        4  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00000568   Section       24  handlers.o(i.__scatterload_zeroinit)
+    i._printf_core                           0x00000580   Section        0  printf6.o(i._printf_core)
+    _printf_core                             0x00000581   Thumb Code   792  printf6.o(i._printf_core)
+    i._printf_post_padding                   0x0000089c   Section        0  printf6.o(i._printf_post_padding)
+    _printf_post_padding                     0x0000089d   Thumb Code    38  printf6.o(i._printf_post_padding)
+    i._printf_pre_padding                    0x000008c2   Section        0  printf6.o(i._printf_pre_padding)
+    _printf_pre_padding                      0x000008c3   Thumb Code    50  printf6.o(i._printf_pre_padding)
+    i._sputc                                 0x000008f4   Section        0  printf6.o(i._sputc)
+    _sputc                                   0x000008f5   Thumb Code    10  printf6.o(i._sputc)
+    i.adc                                    0x00000900   Section        0  internalrtc.o(i.adc)
+    i.alphadisp7SEG                          0x000009ec   Section        0  seven.o(i.alphadisp7SEG)
+    i.delay                                  0x00000ae0   Section        0  internalrtc.o(i.delay)
+    i.delay_ms                               0x00000b48   Section        0  lcd.o(i.delay_ms)
+    i.delay_us                               0x00000b7c   Section        0  lcd.o(i.delay_us)
+    i.getAlphaCode                           0x00000bb0   Section        0  seven.o(i.getAlphaCode)
+    i.main                                   0x00000c60   Section        0  internalrtc.o(i.main)
+    i.runDCMotor                             0x00000f2c   Section        0  internalrtc.o(i.runDCMotor)
+    i.serialPrintStr                         0x00000fd0   Section        0  internalrtc.o(i.serialPrintStr)
+    i.timer1_Init                            0x00001014   Section        0  internalrtc.o(i.timer1_Init)
+    i.uart_init                              0x00001070   Section        0  internalrtc.o(i.uart_init)
+    .data                                    0x40000000   Section        4  internalrtc.o(.data)
+    .bss                                     0x40000004   Section       12  internalrtc.o(.bss)
+    STACK                                    0x40000010   Section     1160  startup.o(STACK)
+    Stack_Top                                0x40000498   Data           0  startup.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv1$ARM_ISAv4$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  internalrtc.o ABSOLUTE
+    _printf_a                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_c                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_charcount                        0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_d                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_e                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_f                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_flags                            0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_fp_dec                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_fp_hex                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_g                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_i                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_int_dec                          0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_l                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lc                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_ll                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lld                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lli                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llo                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llu                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llx                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_dec                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_hex                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_oct                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_ls                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_mbtowc                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_n                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_o                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_p                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_percent                          0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_pre_padding                      0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_return_value                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_s                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_sizespec                         0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_str                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_truncate_signed                  0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_truncate_unsigned                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_u                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_wc                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_wctomb                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_widthprec                        0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_x                                0x00000000   Number         0  stubs.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    Reset_Handler                            0x00000058   ARM Code       0  startup.o(RESET)
+    __main                                   0x00000108   ARM Code       0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x00000108   ARM Code       0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x0000010c   ARM Code       0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x00000110   ARM Code       0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x00000110   ARM Code       0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x00000110   ARM Code       0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x00000110   ARM Code       0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x0000011c   ARM Code       0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x0000011c   ARM Code       0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Inline ARM to Thumb Veneer to __aeabi_uidivmod 0x00000120   ARM Code       8  uidiv.o(.text)
+    __aeabi_uidiv                            0x00000129   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x00000129   Thumb Code    46  uidiv.o(.text)
+    Inline ARM to Thumb Veneer to __scatterload 0x00000158   ARM Code       8  init.o(.text)
+    __scatterload                            0x00000161   Thumb Code    24  init.o(.text)
+    __scatterload_rt2                        0x00000161   Thumb Code     0  init.o(.text)
+    Short Thumb to ARM Veneer to __main_after_scatterload 0x00000181   Thumb Code     8  anon$$obj.o(Veneer$$Code)
+    Board_Init                               0x00000188   ARM Code      76  internalrtc.o(i.Board_Init)
+    LCD_CmdWrite                             0x000001d8   ARM Code      48  lcd.o(i.LCD_CmdWrite)
+    LCD_DataWrite                            0x00000208   ARM Code      48  lcd.o(i.LCD_DataWrite)
+    LCD_DisplayString                        0x00000238   ARM Code      40  lcd.o(i.LCD_DisplayString)
+    LCD_Init                                 0x00000260   ARM Code      56  lcd.o(i.LCD_Init)
+    LCD_Reset                                0x00000298   ARM Code      92  lcd.o(i.LCD_Reset)
+    LCD_SendCmdSignals                       0x000002f4   ARM Code      52  lcd.o(i.LCD_SendCmdSignals)
+    LCD_SendDataSignals                      0x0000032c   ARM Code      52  lcd.o(i.LCD_SendDataSignals)
+    LCD_SendHigherNibble                     0x00000364   ARM Code      32  lcd.o(i.LCD_SendHigherNibble)
+    RTC_GetDateTime                          0x00000388   ARM Code      88  internalrtc.o(i.RTC_GetDateTime)
+    RTC_Init                                 0x000003e4   ARM Code      16  internalrtc.o(i.RTC_Init)
+    RTC_SetDateTime                          0x000003f8   ARM Code      64  internalrtc.o(i.RTC_SetDateTime)
+    SystemInit                               0x0000043c   ARM Code     100  internalrtc.o(i.SystemInit)
+    Timer1_ISR                               0x000004a4   ARM Code      96  internalrtc.o(i.Timer1_ISR)
+    Inline ARM to Thumb Veneer to __2sprintf 0x00000510   ARM Code       8  printf6.o(i.__0sprintf$6)
+    __0sprintf$6                             0x00000519   Thumb Code    36  printf6.o(i.__0sprintf$6)
+    __1sprintf$6                             0x00000519   Thumb Code     0  printf6.o(i.__0sprintf$6)
+    __2sprintf                               0x00000519   Thumb Code     0  printf6.o(i.__0sprintf$6)
+    __ARM_common_call_via_r2                 0x00000541   Thumb Code     2  printf1.o(i.__ARM_common_call_via_r2)
+    __ARM_common_call_via_r3                 0x00000543   Thumb Code     2  init.o(i.__ARM_common_call_via_r3)
+    __ARM_common_call_via_r6                 0x00000545   Thumb Code     2  printfb.o(i.__ARM_common_call_via_r6)
+    __scatterload_copy                       0x00000548   ARM Code      28  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00000564   ARM Code       4  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00000568   ARM Code      24  handlers.o(i.__scatterload_zeroinit)
+    adc                                      0x00000900   ARM Code     220  internalrtc.o(i.adc)
+    alphadisp7SEG                            0x000009ec   ARM Code     240  seven.o(i.alphadisp7SEG)
+    delay                                    0x00000ae0   ARM Code     100  internalrtc.o(i.delay)
+    delay_ms                                 0x00000b48   ARM Code      48  lcd.o(i.delay_ms)
+    delay_us                                 0x00000b7c   ARM Code      52  lcd.o(i.delay_us)
+    getAlphaCode                             0x00000bb0   ARM Code     176  seven.o(i.getAlphaCode)
+    main                                     0x00000c60   ARM Code     592  internalrtc.o(i.main)
+    runDCMotor                               0x00000f2c   ARM Code     148  internalrtc.o(i.runDCMotor)
+    serialPrintStr                           0x00000fd0   ARM Code      64  internalrtc.o(i.serialPrintStr)
+    timer1_Init                              0x00001014   ARM Code      80  internalrtc.o(i.timer1_Init)
+    uart_init                                0x00001070   ARM Code      60  internalrtc.o(i.uart_init)
+    Region$$Table$$Base                      0x000010b0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000010d0   Number         0  anon$$obj.o(Region$$Table)
+    x                                        0x40000000   Data           4  internalrtc.o(.data)
+    rtc                                      0x40000004   Data          12  internalrtc.o(.bss)
+    __initial_sp                             0x40000410   Data         136  startup.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000108
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000010d4, Max: 0x00080000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x000010d0, Max: 0x00080000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x00000108   Code   RO            3    RESET               startup.o
+    0x00000108   0x00000108   0x00000000   Code   RO          200  * .ARM.Collect$$$$00000000  mc_t.l(entry.o)
+    0x00000108   0x00000108   0x00000004   Code   RO          470    .ARM.Collect$$$$00000001  mc_t.l(entry2.o)
+    0x0000010c   0x0000010c   0x00000004   Code   RO          472    .ARM.Collect$$$$00000004  mc_t.l(entry5.o)
+    0x00000110   0x00000110   0x00000000   Code   RO          474    .ARM.Collect$$$$00000008  mc_t.l(entry7b.o)
+    0x00000110   0x00000110   0x00000000   Code   RO          476    .ARM.Collect$$$$0000000A  mc_t.l(entry8b.o)
+    0x00000110   0x00000110   0x0000000c   Code   RO          477    .ARM.Collect$$$$0000000B  mc_t.l(entry9a.o)
+    0x0000011c   0x0000011c   0x00000000   Code   RO          479    .ARM.Collect$$$$0000000D  mc_t.l(entry10a.o)
+    0x0000011c   0x0000011c   0x00000000   Code   RO          481    .ARM.Collect$$$$0000000F  mc_t.l(entry11a.o)
+    0x0000011c   0x0000011c   0x00000004   Code   RO          471    .ARM.Collect$$$$00002712  mc_t.l(entry2.o)
+    0x00000120   0x00000120   0x00000008   Ven    RO          203    .text               mc_t.l(uidiv.o)
+    0x00000128   0x00000128   0x0000002e   Code   RO          203    .text               mc_t.l(uidiv.o)
+    0x00000156   0x00000156   0x00000002   PAD
+    0x00000158   0x00000158   0x00000008   Ven    RO          499    .text               mc_t.l(init.o)
+    0x00000160   0x00000160   0x00000020   Code   RO          499    .text               mc_t.l(init.o)
+    0x00000180   0x00000180   0x00000008   Ven    RO          526    Veneer$$Code        anon$$obj.o
+    0x00000188   0x00000188   0x00000050   Code   RO            8    i.Board_Init        internalrtc.o
+    0x000001d8   0x000001d8   0x00000030   Code   RO          116    i.LCD_CmdWrite      lcd.o
+    0x00000208   0x00000208   0x00000030   Code   RO          117    i.LCD_DataWrite     lcd.o
+    0x00000238   0x00000238   0x00000028   Code   RO          118    i.LCD_DisplayString  lcd.o
+    0x00000260   0x00000260   0x00000038   Code   RO          119    i.LCD_Init          lcd.o
+    0x00000298   0x00000298   0x0000005c   Code   RO          120    i.LCD_Reset         lcd.o
+    0x000002f4   0x000002f4   0x00000038   Code   RO          121    i.LCD_SendCmdSignals  lcd.o
+    0x0000032c   0x0000032c   0x00000038   Code   RO          122    i.LCD_SendDataSignals  lcd.o
+    0x00000364   0x00000364   0x00000024   Code   RO          123    i.LCD_SendHigherNibble  lcd.o
+    0x00000388   0x00000388   0x0000005c   Code   RO            9    i.RTC_GetDateTime   internalrtc.o
+    0x000003e4   0x000003e4   0x00000014   Code   RO           10    i.RTC_Init          internalrtc.o
+    0x000003f8   0x000003f8   0x00000044   Code   RO           11    i.RTC_SetDateTime   internalrtc.o
+    0x0000043c   0x0000043c   0x00000068   Code   RO           12    i.SystemInit        internalrtc.o
+    0x000004a4   0x000004a4   0x0000006c   Code   RO           13    i.Timer1_ISR        internalrtc.o
+    0x00000510   0x00000510   0x00000008   Ven    RO          366    i.__0sprintf$6      mc_t.l(printf6.o)
+    0x00000518   0x00000518   0x00000028   Code   RO          366    i.__0sprintf$6      mc_t.l(printf6.o)
+    0x00000540   0x00000540   0x00000002   Code   RO          273    i.__ARM_common_call_via_r2  mc_t.l(printf1.o)
+    0x00000542   0x00000542   0x00000002   Code   RO          501    i.__ARM_common_call_via_r3  mc_t.l(init.o)
+    0x00000544   0x00000544   0x00000002   Code   RO          227    i.__ARM_common_call_via_r6  mc_t.l(printfb.o)
+    0x00000546   0x00000546   0x00000002   PAD
+    0x00000548   0x00000548   0x0000001c   Code   RO          517    i.__scatterload_copy  mc_t.l(handlers.o)
+    0x00000564   0x00000564   0x00000004   Code   RO          518    i.__scatterload_null  mc_t.l(handlers.o)
+    0x00000568   0x00000568   0x00000018   Code   RO          519    i.__scatterload_zeroinit  mc_t.l(handlers.o)
+    0x00000580   0x00000580   0x0000031c   Code   RO          371    i._printf_core      mc_t.l(printf6.o)
+    0x0000089c   0x0000089c   0x00000026   Code   RO          372    i._printf_post_padding  mc_t.l(printf6.o)
+    0x000008c2   0x000008c2   0x00000032   Code   RO          373    i._printf_pre_padding  mc_t.l(printf6.o)
+    0x000008f4   0x000008f4   0x0000000a   Code   RO          375    i._sputc            mc_t.l(printf6.o)
+    0x000008fe   0x000008fe   0x00000002   PAD
+    0x00000900   0x00000900   0x000000ec   Code   RO           14    i.adc               internalrtc.o
+    0x000009ec   0x000009ec   0x000000f4   Code   RO          182    i.alphadisp7SEG     seven.o
+    0x00000ae0   0x00000ae0   0x00000068   Code   RO           15    i.delay             internalrtc.o
+    0x00000b48   0x00000b48   0x00000034   Code   RO          124    i.delay_ms          lcd.o
+    0x00000b7c   0x00000b7c   0x00000034   Code   RO          125    i.delay_us          lcd.o
+    0x00000bb0   0x00000bb0   0x000000b0   Code   RO          183    i.getAlphaCode      seven.o
+    0x00000c60   0x00000c60   0x000002cc   Code   RO           16    i.main              internalrtc.o
+    0x00000f2c   0x00000f2c   0x000000a4   Code   RO           17    i.runDCMotor        internalrtc.o
+    0x00000fd0   0x00000fd0   0x00000044   Code   RO           19    i.serialPrintStr    internalrtc.o
+    0x00001014   0x00001014   0x0000005c   Code   RO           20    i.timer1_Init       internalrtc.o
+    0x00001070   0x00001070   0x00000040   Code   RO           21    i.uart_init         internalrtc.o
+    0x000010b0   0x000010b0   0x00000020   Data   RO          515    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x40000000, Load base: 0x000010d0, Size: 0x00000498, Max: 0x00008000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x40000000   0x000010d0   0x00000004   Data   RW           23    .data               internalrtc.o
+    0x40000004        -       0x0000000c   Zero   RW           22    .bss                internalrtc.o
+    0x40000010        -       0x00000488   Zero   RW            1    STACK               startup.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      1916        212          0          4         12       9759   internalrtc.o
+       536         16          0          0          0       5278   lcd.o
+       420          4          0          0          0       1339   seven.o
+       264         48          0          0       1160        392   startup.o
+
+    ----------------------------------------------------------------------
+      3144        280         32          4       1172      16768   Object Totals
+         8          0         32          0          0          0   (incl. Generated)
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+        12          4          0          0          0          0   entry9a.o
+        56          0          0          0          0          0   handlers.o
+        42          8          0          0          0        136   init.o
+         2          0          0          0          0         60   printf1.o
+       942          8          0          0          0        420   printf6.o
+         2          0          0          0          0         60   printfb.o
+        54          0          0          0          0         72   uidiv.o
+
+    ----------------------------------------------------------------------
+      1128         24          0          0          0        748   Library Totals
+         6          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      1122         24          0          0          0        748   mc_t.l
+
+    ----------------------------------------------------------------------
+      1128         24          0          0          0        748   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      4272        304         32          4       1172      16312   Grand Totals
+      4272        304         32          4       1172      16312   ELF Image Totals
+      4272        304         32          4          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 4304 (   4.20kB)
+    Total RW  Size (RW Data + ZI Data)              1176 (   1.15kB)
+    Total ROM Size (Code + RO Data + RW Data)       4308 (   4.21kB)
+
+==============================================================================
+
